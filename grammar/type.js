@@ -1,6 +1,6 @@
 // from tree-sitter-haskell
 
-const {parens} = require('./util.js')
+const { braces, brackets, parens, quote, sep1, sep2 } = require('./util.js')
 
 module.exports = {
   // ------------------------------------------------------------------------

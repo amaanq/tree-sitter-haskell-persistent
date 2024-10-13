@@ -1,9 +1,9 @@
 const
 
-decimal = /[0-9][0-9_]*/
-exponent = /[eE][+-]?[0-9_]+/
-hex_exponent = /[pP][+-]?[0-9a-fA-F_]+/
-magic_hash = rule => token(seq(rule, optional(token.immediate(/##?/))))
+  decimal = /[0-9][0-9_]*/,
+  exponent = /[eE][+-]?[0-9_]+/,
+  hex_exponent = /[pP][+-]?[0-9a-fA-F_]+/,
+  magic_hash = rule => token(seq(rule, optional(token.immediate(/##?/))))
 
 module.exports = {
   // ------------------------------------------------------------------------

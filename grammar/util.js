@@ -1,24 +1,24 @@
 const
 
-parens = (...rule) => seq('(', ...rule, ')')
+  parens = (...rule) => seq('(', ...rule, ')'),
 
-braces = (...rule) => seq('{', ...rule, '}')
+  braces = (...rule) => seq('{', ...rule, '}'),
 
-brackets = (...rule) => seq('[', ...rule, ']')
+  brackets = (...rule) => seq('[', ...rule, ']'),
 
-ticked = (...rule) => seq('`', ...rule, '`')
+  ticked = (...rule) => seq('`', ...rule, '`'),
 
-quote = '\''
+  quote = '\'',
 
-qualified = ($, id) => seq($._qualifying_module, id)
+  qualified = ($, id) => seq($._qualifying_module, id),
 
-sep = (sep, rule) => optional(seq(rule, repeat(seq(sep, rule))))
+  sep = (sep, rule) => optional(seq(rule, repeat(seq(sep, rule)))),
 
-sep1 = (sep, rule) => seq(rule, repeat(seq(sep, rule)))
+  sep1 = (sep, rule) => seq(rule, repeat(seq(sep, rule))),
 
-sep2 = (sep, rule) => seq(rule, repeat1(seq(sep, rule)))
+  sep2 = (sep, rule) => seq(rule, repeat1(seq(sep, rule))),
 
-varid_pattern = /[_\p{Ll}](\w|')*#?/u
+  varid_pattern = /[_\p{Ll}](\w|')*#?/u
 
 module.exports = {
   parens,
